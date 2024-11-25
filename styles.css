@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: url('images/background2.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+
+header {
+    background: linear-gradient(to right, #009688, #00796b); 
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative; 
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.2s ease; 
+}
+
+header nav a:hover {
+    color: #f5f5f5;
+    transform: translateY(-5px); 
+    letter-spacing: 1px;
+}
+
+/* Underline animation */
+header nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #f5f5f5; 
+    transition: width 0.3s ease; 
+}
+
+header nav a:hover::after {
+    width: 100%; 
+}
+
+.hero {
+    background: url('images/background1.jpg') no-repeat center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; 
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6); 
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.btn {
+    background-color: #009688;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00796b;
+    transform: translateY(-5px); 
+}
+
+
+.lessons-list {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lesson-item {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    max-width: 1100px;
+    width: 100%;
+    text-align: left;
+}
+#lessons {
+    padding-top: 140px; 
+}
+
+.lesson-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.lesson-header {
+    background: #009688;
+    color: white;
+    padding: 1.5rem;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lesson-header:hover {
+    background-color: #00796b;
+    transform: translateX(10px); 
+}
+
+.lesson-content {
+    display: none;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.lesson-content h3,
+.lesson-content h4 {
+    color: #00796b;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.lesson-content ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-content p {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+.about {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.about p {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    position: relative; 
+    width: 100%;
+    margin-top: 2rem; 
+}
+
+/* Scroll Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[data-aos="fade-up"] {
+    animation: fadeUp 1s ease-in-out;
+}
+
+[data-aos="fade-left"] {
+    animation: fadeUp 1s ease-in-out;
+}
+
+[data-aos="fade-right"] {
+    animation: fadeUp 1s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .lesson-item {
+        padding: 1rem;
+    }
+    .lesson-header {
+        font-size: 1.1rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero-content {
+        padding: 2rem;
+    }
+    .btn {
+        padding: 0.8rem 2rem;
+    }
+    .about p {
+        font-size: 1rem;
+    }
+}
